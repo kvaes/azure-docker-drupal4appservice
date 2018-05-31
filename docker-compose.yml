@@ -11,3 +11,7 @@ services:
    drupalwww:
      image: kvaes/drupal4azure:latest
      restart: always
+     volumes:
+       wwwroot: /home/site/wwwroot
+volumes:
+  wwwroot:
