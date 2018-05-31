@@ -1,13 +1,13 @@
 version: '2'
 
 services:
-   drupalwww:
-     image: kvaes/drupal4azure:latest
-     restart: always
    varnishcache:
      image: wodby/varnish
      restart: always
      ports:
-       - "80:6081"
+       - "8000:6081"
      environment:
        VARNISH_BACKEND_HOST: drupalwww
+   drupalwww:
+     image: kvaes/drupal4azure:latest
+     restart: always
