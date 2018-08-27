@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
    varnishcache:
@@ -12,6 +12,6 @@ services:
      image: kvaes/drupal4azure:latest
      restart: always
      volumes:
-       wwwroot: /home/site/wwwroot
+       - "wwwroot:/home/site/wwwroot"
 volumes:
   wwwroot:
